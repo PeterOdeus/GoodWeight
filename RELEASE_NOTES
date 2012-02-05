@@ -2,3 +2,4 @@ AndroidManifest: 	package, versionCode and versionName
 Facebook localized URL
 min-js
 DB initial state
+Change to wait-for-db mode

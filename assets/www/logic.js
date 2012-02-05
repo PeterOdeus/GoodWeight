@@ -40,11 +40,11 @@ function onUnLoaded(){
 
 $(document).ready(function () {
 	
-	//showLoadingOverlay();
+	showLoadingOverlay();
 	//access in developer machine browser mode
-	fireUpGui();
+	//fireUpGui();
 	//access in android mode
-	//goodWeightModelState.setHtmlBodyLoaded(true);
+	goodWeightModelState.setHtmlBodyLoaded(true);
 });
 
 function ensureSaveWeightAndCharityPanelShowing(){

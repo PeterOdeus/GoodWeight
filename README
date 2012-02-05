@@ -1,0 +1,36 @@
+GoodWeight
+
+
+development environment
+
+	- Instructions at http://wiki.phonegap.com/w/page/30862722/phonegap-android-eclipse-quickstart
+
+	- Android SDK
+
+	- phonegap.jar (bundled inside GoodWeight/libs folder)
+
+	- Eclipse Java EE IDE for Web Developers.
+		Version: Indigo Service Release 1
+		Build id: 20110916-0149
+	- Locale: UTF-8
+	- Line ending: Unix
+
+	- Additional Eclipse software
+		Install at help->Install New Software->Add...
+		
+			Name: MDS PhoneGap for Android Plug-In 1.2
+			Location: https://svn.codespot.com/a/eclipselabs.org/mobile-web-development-with-phonegap/tags/r1.2/download
+
+			Name: Android Developer Tools for Eclipse
+			Location: https://dl-ssl.google.com/android/eclipse/
+
+			Work with: http://download.eclipse.org/egit/updates and select/install everything
+				Window > open perspective > other > Git Repository Exploring
+				Right-click inside Git Repositories -> Paste Repository Path or URI (https://PeterOdeus@github.com/PeterOdeus/GoodWeight.git)
+
+
+Hardware 
+
+	- When plugging in your Android phone to dev machine's USB port, select "Charge only".
+
+	- On the device, go to Settings > Applications > Development and enable USB debugging

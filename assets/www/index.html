@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>GoodWeight</title>
+
+<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.0.min.css"
+	type="text/css" />
+<link rel="stylesheet" href="goodweight-style-override.css"
+	type="text/css" />
+
+<link rel="stylesheet" href="mobiscroll/css/mobiscroll-1.5.2.css"
+	type="text/css" />
+<link rel="stylesheet" href="showLoading/css/showLoading.css"
+	type="text/css" />
+<link rel="stylesheet" href="progressbar/progressbar.css"
+	type="text/css" />
+<script type="text/javascript" src="jquery.mobile/jquery-1.6.4.min"></script>
+<script type="text/javascript" src="mobileInit.js"></script>
+<script type="text/javascript"
+	src="jquery.mobile/jquery.mobile-1.0.min.js"></script>
+<script type="text/javascript" src="mobiscroll/js/mobiscroll-1.5.2.js"></script>
+<script type="text/javascript" charset="utf-8" src="phonegap-1.3.0.js"></script>
+<script type="text/javascript"
+	src="showLoading/js/jquery.showLoading.min.js"></script>
+<script type="text/javascript" src="progressbar/progressbar.js"></script>
+<script type="text/javascript" src="util.js"></script>
+<script type="text/javascript" src="model.js"></script>
+<script type="text/javascript" src="logic.js"></script>
+<script type="text/javascript" src="db.js"></script>
+<script type="text/javascript" src="view.js"></script>
+<script type="text/javascript" src="sound.js"></script>
+</head>
+<body onorientationchange="updateOrientation();"
+	onunload="onUnLoaded();">
+	<div data-role="header">
+		<a id="buttonMe" class="toolbar-button lockable" data-icon="heart">Me</a>
+		<h1>GoodWeight</h1>
+		<a id="buttonSound" class="toolbar-button lockable" data-icon="check">Sound</a>
+		<div data-role="navbar" data-iconpos="left">
+			<ul>
+				<li><a id="buttonSlowFood" class="toolbar-button lockable"
+					data-icon="clock">SlowFood</a></li>
+				<li><a id="buttonFacebook" class="toolbar-button lockable"
+					data-icon="facebook">Inspiration</a></li>
+				<!--li><a href="http://www.facebook.com/groups/347241081971588/"
+					class="lockable" id="buttonSupport" data-icon="facebook"> Get
+						Inspired</a></li-->
+				<!--li><a href="http://www.facebook.com/groups/347241081971588/" class="lockable" id="buttonSupport"
+					data-icon="facebook"> Get Inspired</a></li-->
+				<!-- http://www.facebook.com/groups/347241081971588/
+				li><a id="buttonHow" class="toolbar-button lockable" data-icon="info">Learn</a></li-->
+				<!--li><a href="#fbLangChooser" data-rel="dialog" id="buttonTestSomething">Test</a></li-->
+			</ul>
+		</div>
+	</div>
+	<div id="divOverlay"></div>
+	<div id="divFacebook" class="goodWeightContentHolder">
+		<div class="goodWeightContent">
+			<div class="goodWeightContentItem">
+				<div class="flags">
+					<a href="http://www.facebook.com/groups/347241081971588/" data-role="button" data-icon="flag-sweden">GoodWeight Sverige</a>
+					<!--ul data-role="listview"> 
+						<li><a href="#">Audi</a></li>
+						<li><a href="#">BMW</a></li>
+						<li><a href="#">Cadillac</a></li>
+						<li><a href="#">Ferrari</a></li>
+					</ul-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="divMe" class="goodWeightContentHolder">
+		<div class="goodWeightContent">
+			<div class="goodWeightContentItem">
+				<div class="goodWeightContentItemLabel">
+					<b>Weight:</b> Divide every meal in half. Have one share now. Save
+					the other for later...
+				</div>
+				<div class="dw" id="weightScroller"></div>
+				<div class="goodWeightContentItemLabel" id="weightExtendedInfo"></div>
+			</div>
+			<div class="goodWeightContentItem">
+				<div class="goodWeightContentItemLabel">
+					<b>Charity:</b> ...Give some food-saved money to charity. Get
+					content on goodness and earn the strength to divide your next meal
+					in half.
+				</div>
+				<div class="dw" id="charityScroller"></div>
+				<div class="goodWeightContentItemLabel" id="charityExtendedInfo"></div>
+			</div>
+		</div>
+		<div id="asteriskExplanation">* See 'Learn' above.</div>
+	</div>
+	<div id="divSlowFood" class="goodWeightContentHolder">
+		<div class="goodWeightContent">
+			<div class="goodWeightContentItem">
+				<span id="slowFoodInstruction"> Relax. Push <em>play</em>.
+					Enjoy your meal. <em>Slowly</em>... Drink a glass of water. Drink
+					another one. Push <em>stop</em>. Reached top score? That's
+					SlowFood.
+				</span>
+			</div>
+			<div class="slow-food-icon"></div>
+			<div id="meterHolder"></div>
+		</div>
+	</div>
+	<div id="divSaveWeight" class="cancelSaveDialog" data-role="footer">
+		<div data-role="navbar" data-iconpos="left">
+			<ul>
+				<li><a id="btnCancelWeightAndCharity"
+					class="transientlyActiveButton" data-icon="delete">Cancel</a></li>
+				<li><a id="btnSaveWeightAndCharity"
+					class="transientlyActiveButton" data-icon="check">Save</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

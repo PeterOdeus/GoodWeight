@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  p { background:yellow; font-weight:bold; cursor:pointer; padding:5px; }
+  p.over { background: #ccc; }
+  span { color:red; }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+  
+  <div id="aP">Click me!</div>
+  <span></span>
+  
+<script>
+$("#aP").live({
+  click: function() {$(this).after("<p>Another paragraph!</p>");}
+});
+</script>
+
+</body>
+</html>

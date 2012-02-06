@@ -178,7 +178,7 @@ function resetCharityScrollerValue(){
 }
 
 function setWeightExtendedInfo(){
-	$('#weightExtendedInfo').html('Two week trend: <b>' + weightModel.getWeightDeltaToString() + '</b>');
+	$('#weightExtendedInfo').html('2-Week trend: <b>' + weightModel.getWeightDeltaToString() + '</b>');
 }
 
 function setCharityExtendedInfo(){

@@ -27,7 +27,7 @@ var weightModel = {
 		},
 		getWeightDeltaToString: function(){
 			if(this.weightDelta ==null){
-				return "not enough data";
+				return "Enter daily to realize...";
 			}else{
 				if(this.weightDelta < 0){
 					return "" + this.weightDelta;

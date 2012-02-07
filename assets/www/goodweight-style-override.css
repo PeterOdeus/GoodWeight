@@ -32,7 +32,10 @@
 .ui-footer .ui-btn-right { position: absolute; right: 10px; }
 
 #asteriskExplanation{
-	display: none;
+	/*display: none;*/
+	background-image: url(img/logo.png); 
+	width:222px;
+	height:50px;
 	position:absolute;
 	bottom: 3px;
 	right: 3px;

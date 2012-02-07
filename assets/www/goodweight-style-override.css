@@ -93,9 +93,22 @@
 	-o-border-radius:0px;
 	border-radius:0px;
 }
+.ui-icon-flag-usa {
+	background-image: url(icons/us.png); 
+}
 .ui-icon-flag-sweden {
 	background-image: url(icons/se.png); 
 }
+.ui-icon-flag-denmark {
+	background-image: url(icons/dk.png); 
+}
+.ui-icon-flag-finland {
+	background-image: url(icons/fi.png); 
+}
+.ui-icon-flag-norway {
+	background-image: url(icons/no.png); 
+}
+
 .slow-food-icon{
 	background: url(img/Play1.png) no-repeat;
 	/*-webkit-background-size: cover;

@@ -43,9 +43,9 @@ public class GoodWeightActivity extends DroidGap implements OnPreparedListener{
     
     
     private void prepareAudio(){
-    	mediaPlayer = MediaPlayer.create(this, R.raw.birdies);
-    	mediaPlayer.setLooping(true);
-    	mediaPlayer.setOnPreparedListener(this);    	
+    	//mediaPlayer = MediaPlayer.create(this, R.raw.birdies);
+//    	mediaPlayer.setLooping(true);
+//    	mediaPlayer.setOnPreparedListener(this);    	
     }
     
   //Fullscreen (No title bar and status bar) 

@@ -32,8 +32,8 @@ public class GoodWeightActivity extends DroidGap implements OnPreparedListener{
         if(language == null || language != null && language.trim().equalsIgnoreCase("")){
         	language = "en";
         }  
-        
-        super.loadUrl("file:///android_asset/www/index.html?lang=" + language);
+        super.loadUrl("file:///android_asset/www/index.html");
+        //super.loadUrl("file:///android_asset/www/index.html?lang=" + language);
         //super.loadUrl("file:///android_asset/www/mobiscroll/demo.html");
         
         //Audio removed in favor of PhoneGap Media API. Or not.

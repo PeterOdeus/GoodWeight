@@ -144,15 +144,15 @@ var toolbarButtonClick = function() {
 	activateMutuallyExclusiveButton("#" + buttonSelector, ".toolbar-button");
 	if(buttonSelector == "buttonMe"){
 		toggleContentView("#divMe");
-		$(".ui-body-c").css('background', 'url(img/oak.jpg)');
+		$(".ui-body-c").css('background', 'url(img/shutterstock_2151257.jpg)');
 	}
 	if(buttonSelector == "buttonFacebook"){
 		toggleContentView("#divFacebook");
-		$(".ui-body-c").css('background', 'url(img/oak.jpg)');
+		$(".ui-body-c").css('background', 'url(img/shutterstock_2151257.jpg)');
 	} 
 	if(buttonSelector == "buttonSlowFood"){
 		toggleContentView("#divSlowFood");
-		$(".ui-body-c").css('background', 'url(img/oak.jpg)');
+		$(".ui-body-c").css('background', 'url(img/shutterstock_2151257.jpg)');
 	}
 
 };

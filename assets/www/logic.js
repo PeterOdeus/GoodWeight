@@ -2,6 +2,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 var devicePlatform = null;
 var shouldPlayPlatformSpecificAudio = false;
+var isInBrowserModeOnly = false;
 
 function onDeviceReady() {
 	console.log("deviceReady");
@@ -40,11 +41,12 @@ function onUnLoaded(){
 
 $(document).ready(function () {
 	
-	showLoadingOverlay();
-	//access in developer machine browser mode
-	//fireUpGui();
-	//access in android mode
-	goodWeightModelState.setHtmlBodyLoaded(true);
+    if(isInBrowserModeOnly == true){
+        fireUpGui();
+    }else{
+        showLoadingOverlay();
+        goodWeightModelState.setHtmlBodyLoaded(true);
+    }
 });
 
 function ensureSaveWeightAndCharityPanelShowing(){

@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>GoodWeight</title>
+
+<link rel="stylesheet" href="webres/jquery.mobile/jquery.mobile-1.0.min.css" type="text/css" />
+<link rel="stylesheet" href="webres/css/goodweight-style-override.css" type="text/css" />
+
+<link rel="stylesheet" href="webres/mobiscroll/css/mobiscroll-1.5.2.css" type="text/css" />
+<link rel="stylesheet" href="webres/showLoading/css/showLoading.css" type="text/css" />
+<link rel="stylesheet" href="webres/progressbar/progressbar.css" type="text/css" />
+<script type="text/javascript" src="webres/jquery.mobile/jquery-1.6.4.min"></script>
+<script type="text/javascript" src="webres/jquery.mobile/jquery.mobile-1.0.min.js"></script>
+<script type="text/javascript" src="webres/mobiscroll/js/mobiscroll-1.5.2.js"></script>
+<script type="text/javascript" src="webres/js/phonegap-1.3.0.js"></script>
+<script type="text/javascript" src="webres/showLoading/js/jquery.showLoading.min.js"></script>
+<script type="text/javascript" src="webres/progressbar/progressbar.js"></script>
+<script type="text/javascript" src="webres/js/util.js"></script>
+<script type="text/javascript" src="webres/js/model.js"></script>
+<script type="text/javascript" src="webres/js/logic.js"></script>
+<script type="text/javascript" src="webres/js/db.js"></script>
+<script type="text/javascript" src="webres/js/view.js"></script>
+<script type="text/javascript" src="webres/js/sound.js"></script>
+</head>
+<body onorientationchange="updateOrientation();"
+	onunload="onUnLoaded();">
+	<div data-role="header">
+		<a id="buttonMe" class="toolbar-button lockable" data-icon="heart">Me</a>
+		<h1>GoodWeight</h1>
+		<a id="buttonSound" class="toolbar-button lockable" data-icon="check">Sound</a>
+		<div data-role="navbar" data-iconpos="left">
+			<ul>
+				<li><a id="buttonSlowFood" class="toolbar-button lockable"
+					data-icon="clock">SlowFood</a></li>
+				<li><a id="buttonFacebook" class="toolbar-button lockable"
+					data-icon="facebook">Inspiration</a></li>
+				<!--li><a href="http://www.facebook.com/groups/347241081971588/"
+					class="lockable" id="buttonSupport" data-icon="facebook"> Get
+						Inspired</a></li-->
+				<!--li><a href="http://www.facebook.com/groups/347241081971588/" class="lockable" id="buttonSupport"
+					data-icon="facebook"> Get Inspired</a></li-->
+				<!-- http://www.facebook.com/groups/347241081971588/
+				li><a id="buttonHow" class="toolbar-button lockable" data-icon="info">Learn</a></li-->
+				<!--li><a href="#fbLangChooser" data-rel="dialog" id="buttonTestSomething">Test</a></li-->
+			</ul>
+		</div>
+	</div>
+	<div id="divOverlay"></div>
+	<div id="divFacebook" class="goodWeightContentHolder">
+		<div class="goodWeightContent">
+			<div class="goodWeightContentItem">
+				<div>
+					<b>Help wanted!</b> Become an <em>inspiring GoodWeight coach</em> on your country's facebook group.
+					We'll split the smartphone app sales money equally among ourselves and <em>charity</em>.
+					Get in GoodWeight shape and <em>make a difference</em>. <b>Now!</b>
+				</div>
+				<div class="flags">
+					<a href="http://www.facebook.com/peter.odeus" 
+						data-role="button" data-icon="flag-usa">GoodWeight USA <small>(beta)</small></a>
+					<a href="http://m.facebook.com/home.php?sk=group_309750699066750" 
+						data-role="button" data-icon="flag-denmark">GoodWeight Danmark <small>(beta)</small></a>
+					<a href="http://m.facebook.com/home.php?sk=group_305500102820450" 
+						data-role="button" data-icon="flag-norway">GoodWeight Norge <small>(beta)</small></a>
+					<a href="http://m.facebook.com/home.php?sk=group_308176715891365" 
+						data-role="button" data-icon="flag-finland">GoodWeight Suomi <small>(beta)</small></a>
+					<a href="http://m.facebook.com/home.php?sk=group_347241081971588" 
+						data-role="button" data-icon="flag-sweden">GoodWeight Sverige <small>(beta)</small></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="divMe" class="goodWeightContentHolder">
+		<div class="goodWeightContent">
+			<div class="goodWeightContentItem">
+				<div class="goodWeightContentItemLabel">
+					<b>Weight:</b> Divide every meal in half. Have one share now. Save
+					the other for later...
+				</div>
+				<div class="dw" id="weightScroller"></div>
+				<div class="goodWeightContentItemLabel" id="weightExtendedInfo"></div>
+			</div>
+			<div class="goodWeightContentItem">
+				<div class="goodWeightContentItemLabel">
+					<b>Charity:</b> ...Give some saved money to charity. Get
+					content on goodness and earn the strength to divide your next meal
+					in half.
+				</div>
+				<div class="dw" id="charityScroller"></div>
+				<div class="goodWeightContentItemLabel" id="charityExtendedInfo"></div>
+			</div>
+		</div>
+	</div>
+	<div id="divSlowFood" class="goodWeightContentHolder">
+		<div class="goodWeightContent">
+			<div class="goodWeightContentItem">
+				<span id="slowFoodInstruction"> Relax. Push <em>play</em>.
+					Enjoy your meal. <em>Slowly</em>... Drink a glass of water. Drink
+					another one. Push <em>stop</em>. Reached top score? That's
+					SlowFood.
+				</span>
+			</div>
+			<div class="slow-food-icon"></div>
+			<div id="meterHolder"></div>
+		</div>
+	</div>
+	<div id="divSaveWeight" class="cancelSaveDialog" data-role="footer">
+		<div data-role="navbar" data-iconpos="left">
+			<ul>
+				<li><a id="btnCancelWeightAndCharity"
+					class="transientlyActiveButton" data-icon="delete">Cancel</a></li>
+				<li><a id="btnSaveWeightAndCharity"
+					class="transientlyActiveButton" data-icon="check">Save</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="asteriskExplanation"></div>
+</body>
+</html>

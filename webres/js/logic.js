@@ -1,7 +1,7 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 var devicePlatform = null;
 var shouldPlayPlatformSpecificAudio = false;
-var isInBrowserModeOnly = true;
+var isInBrowserModeOnly = false;
 
 function onDeviceReady(){
 	console.log("deviceReady");

@@ -5,26 +5,30 @@ var my_media = null;
 // Play audio
 //
 function playAudio() {
-	if(shouldPlayPlatformSpecificAudio == true){
-		window.JSInterface.playAudio();
-	}else{
-		// Create Media object from src
-		if(my_media == null){
-			my_media = new Media(getAudioSource(), onAudioSuccess, onAudioError);
+	if(isInBrowserModeOnly == false){
+		if(shouldPlayPlatformSpecificAudio == true){
+			window.JSInterface.playAudio();
+		}else{
+			// Create Media object from src
+			if(my_media == null){
+				my_media = new Media(getAudioSource(), onAudioSuccess, onAudioError);
+			}
+			// Play audio
+			my_media.play();
 		}
-		// Play audio
-		my_media.play();
 	}
 }
 
 //Pause audio
 //
 function pauseAudio() {
-	if(shouldPlayPlatformSpecificAudio == true){
-		window.JSInterface.pauseAudio();
-	}else{
-		if (my_media) {
-			my_media.pause();
+	if(isInBrowserModeOnly == false){
+		if(shouldPlayPlatformSpecificAudio == true){
+			window.JSInterface.pauseAudio();
+		}else{
+			if (my_media) {
+				my_media.pause();
+			}
 		}
 	}
 }

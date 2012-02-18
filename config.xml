@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	id		= "com.phonegap.getting"
-	version 	= "0.0.91">
+	id		= "net.goodweight"
+	version 	= "0.9.9"
+	versionCode = "099">
 
-	<name>PhoneGap: Getting Started</name>
+	<name>GoodWeight</name>
 
 	<description>
-		A template for getting started with PhoneGap development and build.phonegap.com
+		GoodWeight - Enjoyable weight control for the good hearted
 	</description>
 
-	<author href="http://alunny.github.com"
-		email="andrew.lunny@nitobi.com">
-		Andrew Lunny
+	<author href="http://www.facebook.com/peter.odeus"
+		email="peter.odeus@gmail.com">
+		Peter Odéus
 	</author>
 
 	<gap:platforms>
@@ -24,9 +25,12 @@
 
 	<icon src="icon.png" gap:role="default" />
 
-	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	<feature name="http://api.phonegap.com/1.0/file"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
 
 	<!-- sample preference specification -->
 	<!-- <preference name="autorotate" value="false" readonly="true"/> -->
+	<preference name="orientation" value="portrait" />
+	<preference name="fullscreen" value="true" />
+	<preference name="stay-in-webview" value="true" />
 </widget>

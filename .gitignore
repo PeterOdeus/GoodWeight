@@ -2,5 +2,5 @@
 *.apk
 bin/
 gen/
-assets/www/.project
-assets/www/.settings
+.project
+.settings

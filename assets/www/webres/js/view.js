@@ -48,11 +48,11 @@ function fireUpGui(){
 
 	$("#buttonTestSomething").click(function(){
 		
-//		$('.slow-food-icon').css('background-image', 'url(img/Play1Pressed.png)');
+//		$('.slow-food-icon').css('background-image', 'url(../img/Play1Pressed.png)');
 //		$('.slow-food-icon').fadeOut(800);
 //		
 //		$('.slow-food-icon').promise().done(function() {
-//			$('.slow-food-icon').css('background-image', 'url(img/Stop1.png)');
+//			$('.slow-food-icon').css('background-image', 'url(../img/Stop1.png)');
 //			$('.slow-food-icon').fadeIn(800);
 //			$('.slow-food-icon').promise().done(function() {
 //				recursiveSlowFoodToggleFn();
@@ -144,15 +144,15 @@ var toolbarButtonClick = function() {
 	activateMutuallyExclusiveButton("#" + buttonSelector, ".toolbar-button");
 	if(buttonSelector == "buttonMe"){
 		toggleContentView("#divMe");
-		$(".ui-body-c").css('background', 'url(img/shutterstock_2151257.jpg)');
+		$(".ui-body-c").css('background', 'url(webres/img/shutterstock_2151257.jpg)');
 	}
 	if(buttonSelector == "buttonFacebook"){
 		toggleContentView("#divFacebook");
-		$(".ui-body-c").css('background', 'url(img/shutterstock_2151257.jpg)');
+		$(".ui-body-c").css('background', 'url(webres/img/shutterstock_2151257.jpg)');
 	} 
 	if(buttonSelector == "buttonSlowFood"){
 		toggleContentView("#divSlowFood");
-		$(".ui-body-c").css('background', 'url(img/shutterstock_2151257.jpg)');
+		$(".ui-body-c").css('background', 'url(webres/img/shutterstock_2151257.jpg)');
 	}
 
 };

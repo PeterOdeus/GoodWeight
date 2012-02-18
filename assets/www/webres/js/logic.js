@@ -1,7 +1,7 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 var devicePlatform = null;
 var shouldPlayPlatformSpecificAudio = false;
-var isInBrowserModeOnly = false;
+var isInBrowserModeOnly = true;
 
 function onDeviceReady(){
 	console.log("deviceReady");
@@ -201,14 +201,14 @@ var handleSlowFoodTimerClick = function(){
 	if(imageFileName.indexOf("Play") >= 0){
 		continueSlowFoodToggling = true;
 		startTime = new Date();
-		slowFoodButton.css('background-image', 'url(img/Play1Pressed.png)');
+		slowFoodButton.css('background-image', 'url(webres/img/Play1Pressed.png)');
 		slowFoodButton.fadeOut(1000);
 		
 		$('#slowFoodMeter').fadeOut('fast');
 		$('#slowFoodMeter').remove();
 		
 		slowFoodButton.promise().done(function() {
-			slowFoodButton.css('background-image', 'url(img/Stop1.png)');
+			slowFoodButton.css('background-image', 'url(webres/img/Stop1.png)');
 			slowFoodButton.fadeIn(1000);
 			slowFoodButton.promise().done(function() {
 //				console.log("once a sec.");
@@ -232,7 +232,7 @@ var handleSlowFoodTimerClick = function(){
 		}
 		console.log(totalTimePercentage);
 		slowFoodButton.promise().done(function() {
-			slowFoodButton.css('background-image', 'url(img/Stop1Pressed.png)');
+			slowFoodButton.css('background-image', 'url(webres/img/Stop1Pressed.png)');
 			slowFoodButton.css({opacity:1.0});
 			
 		});
@@ -247,7 +247,7 @@ var handleSlowFoodTimerClick = function(){
 				}, 5000);
 		});
 		$(".meter > span").promise().done(function(){
-			slowFoodButton.css('background-image', 'url(img/Play1.png)');
+			slowFoodButton.css('background-image', 'url(webres/img/Play1.png)');
 		});
 	}
 };

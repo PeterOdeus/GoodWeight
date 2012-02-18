@@ -1,9 +1,9 @@
 
 .commaSeparator{
-	background-image: url(img/commaSeparator.png);
+	background-image: url(../img/commaSeparator.png);
 }
 .dotSeparator{
-	background-image: url(img/dotSeparator.png);
+	background-image: url(../img/dotSeparator.png);
 }
 .decimalSeparator{
 	width: 11px;
@@ -14,16 +14,16 @@
 }
 
 .ui-icon-facebook {
- 	background-image: url(icons/facebook.png); 
+ 	background-image: url(../icons/facebook.png); 
  	background-repeat: no-repeat;
  }
  
 .ui-icon-heart {
- 	background-image: url(icons/heart.png); 
+ 	background-image: url(../icons/heart.png); 
  	background-repeat: no-repeat;
  }
  .ui-icon-clock {
- 	background-image: url(icons/clock.png); 
+ 	background-image: url(../icons/clock.png); 
  	background-repeat: no-repeat;
  }
  
@@ -33,7 +33,7 @@
 
 #asteriskExplanation{
 	/*display: none;*/
-	background-image: url(img/logo.png);
+	background-image: url(../img/logo.png);
     width:222px;
 	height:50px;
 	position:absolute;
@@ -103,23 +103,23 @@
 	border-radius:0px;
 }
 .ui-icon-flag-usa {
-	background-image: url(icons/us.png); 
+	background-image: url(../icons/us.png); 
 }
 .ui-icon-flag-sweden {
-	background-image: url(icons/se.png); 
+	background-image: url(../icons/se.png); 
 }
 .ui-icon-flag-denmark {
-	background-image: url(icons/dk.png); 
+	background-image: url(../icons/dk.png); 
 }
 .ui-icon-flag-finland {
-	background-image: url(icons/fi.png); 
+	background-image: url(../icons/fi.png); 
 }
 .ui-icon-flag-norway {
-	background-image: url(icons/no.png); 
+	background-image: url(../icons/no.png); 
 }
 
 .slow-food-icon{
-	background: url(img/Play1.png) no-repeat;
+	background: url(../img/Play1.png) no-repeat;
 	/*-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -166,7 +166,7 @@ box-align:center;
 
 .ui-body-c {
 	
-	background: url(img/shutterstock_2151257.jpg) no-repeat top left fixed;
+	background: url(../img/shutterstock_2151257.jpg) no-repeat top left fixed;
 		-webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

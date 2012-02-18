@@ -36,11 +36,11 @@ function pauseAudio() {
 function getAudioSource(){
 	console.log("device.platform.toLowerCase(): " + devicePlatform);
 	if(devicePlatform == "android"){
-		return "/android_asset/www/audio/birdies.mp3";
+		return "/android_asset/www/webres/audio/birdies.mp3";
 	}
 	if(devicePlatform == "ios" || devicePlatform == "iphone"){
 		//See local file example (notification.beep) on iphone quirks at http://docs.phonegap.com/en/1.4.0/phonegap_notification_notification.md.html#notification.beep 
-		return "audio/birdies.mp3";
+		return "../audio/birdies.mp3";
 	}
 	//Try this on other device platforms
 	

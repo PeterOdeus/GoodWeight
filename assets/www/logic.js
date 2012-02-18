@@ -1,17 +1,31 @@
 document.addEventListener("deviceready", onDeviceReady, false);
-
 var devicePlatform = null;
 var shouldPlayPlatformSpecificAudio = false;
 var isInBrowserModeOnly = false;
 
-function onDeviceReady() {
+function onDeviceReady(){
 	console.log("deviceReady");
-	devicePlatform = device.platform.toLowerCase();
-	onDeviceReadyPlatformSpecific();
-	  // Register the event listener
-  document.addEventListener("pause", onPause, false);
-  document.addEventListener("resume", onResume, false);
+	// Register the event listener
+	document.addEventListener("pause", onPause, false);
+	document.addEventListener("resume", onResume, false);
+	
+	if(isInBrowserModeOnly == false){
+		devicePlatform = device.platform.toLowerCase();
+		onDeviceReadyPlatformSpecific();
+	}
+	onDeviceReady_db();
 }
+
+$(document).ready(function () {
+	if(isInBrowserModeOnly == true){
+		alert("isInBrowserModeOnly == true");
+	}
+	showLoadingOverlay();
+	if(isInBrowserModeOnly == true){
+		onDeviceReady();
+	}
+    goodWeightModelState.setHtmlBodyLoaded(true);
+});
 
 function onDeviceReadyPlatformSpecific(){
 	if(devicePlatform == "ios" || devicePlatform == "iphone"){
@@ -38,16 +52,6 @@ function onUnLoaded(){
 	console.log("I'm unloading");
 	stopAudio();
 }
-
-$(document).ready(function () {
-	
-    if(isInBrowserModeOnly == true){
-        fireUpGui();
-    }else{
-        showLoadingOverlay();
-        goodWeightModelState.setHtmlBodyLoaded(true);
-    }
-});
 
 function ensureSaveWeightAndCharityPanelShowing(){
 	var divSaveWeight = $("#divSaveWeight:hidden");

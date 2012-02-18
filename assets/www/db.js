@@ -1,7 +1,5 @@
 var goodWeightDB = null;
 
-document.addEventListener("deviceready", onDeviceReady_db, false);
-
 function onInitialDatabasePopulation() {
 	console.log("onInitialDatabasePopulation");
 	goodWeightModelState.removeEventListener("onInitialDatabasePopulation");

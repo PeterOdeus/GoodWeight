@@ -1,7 +1,18 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 var devicePlatform = null;
 var shouldPlayPlatformSpecificAudio = false;
-var isInBrowserModeOnly = false;
+
+/*
+ * In local development mode, the non-checked-in file phonegap.js,
+ * a sibling to index.html, controls whether running in chrome browser mode. 
+ * Please copy your target version of phonegap.js, e.g. phonegap1.3.0.js,
+ * to reside together with index.html, rename it to "phonegap.js" and add 
+ * "var isInBrowserModeOnly = true/false;" When in browser mode, an alert box will
+ * inform you appropriately.
+ */
+if (typeof isInBrowserModeOnly === 'undefined') {
+	var isInBrowserModeOnly = false;
+}
 
 function onDeviceReady(){
 	console.log("deviceReady");

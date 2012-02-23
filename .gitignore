@@ -3,5 +3,3 @@ phonegap.js
 *.apk
 bin/
 gen/
-.project
-.settings

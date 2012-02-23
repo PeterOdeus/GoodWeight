@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="webres/jquery.mobile/|webres/mobiscroll/js/|webres/progressbar/|webres/js/|webres/showLoading/js/" kind="src" path=""/>
+	<classpathentry kind="src" path="webres/jquery.mobile"/>
+	<classpathentry kind="src" path="webres/js"/>
+	<classpathentry kind="src" path="webres/mobiscroll/js"/>
+	<classpathentry kind="src" path="webres/progressbar"/>
+	<classpathentry kind="src" path="webres/showLoading/js"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
